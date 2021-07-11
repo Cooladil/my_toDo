@@ -94,7 +94,7 @@ app.route("/remove/:id")
 
 mongoose.set("useFindAndModify", false);
 
-mongoose.connect(process.env.secreturl, { useNewUrlParser: true , useUnifiedTopology: true }, (err, res)=>{
+mongoose.connect("mongodb+srv://Cool_Adil:war_0820@cluster0.riphs.mongodb.net/toDo_list?retryWrites=true&w=majority", { useNewUrlParser: true , useUnifiedTopology: true }, (err, res)=>{
     if (err) throw err;
     console.log("Connection established!");
     app.listen(8080, () => console.log('Server is established!!!'));
